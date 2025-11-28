@@ -2,12 +2,15 @@
     color: #a92c3b;
 }
 
-.chats{
+.chats {
     width: 100%;
     max-width: 700px;
-    overflow-y: scroll;
-    padding: 8rem;
+    overflow-y: auto;
+    padding: 6rem 2rem; 
+    scrollbar-width: thin;
+    scrollbar-color: #a92c3b rgba(255, 255, 255, 0.1);
 }
+
 
 .user-div{
     display: flex;
@@ -51,7 +54,7 @@
     box-sizing: border-box;
     overflow-y: auto;
   }
-
+  
   #new-chat {
     margin-top: 1rem;
     font-size: 1.1rem;
