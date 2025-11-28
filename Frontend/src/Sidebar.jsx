@@ -70,7 +70,7 @@ function Sidebar(){
         <section className="sidebar">
             {/* logo */}
                 <div>
-                    <img src="/src/assets/ShariqGPT.png" alt="ShariqGPT Logo" id="logo"></img>
+                    <img src="/ShariqGPT.png" alt="ShariqGPT Logo" id="logo"></img>
                 </div>
 
             {/* new chat */}
