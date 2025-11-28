@@ -8,7 +8,13 @@ const app = express()
 const PORT = 8080;
 
 app.use(express.json())
-app.use(cors())
+
+app.use(
+  cors({
+    origin: "*", // start me * rakh lo, baad me front-end URL put kar sakte ho
+  })
+);
+
 app.use("/api",Router)
 
 app.listen(PORT, () => {
