@@ -109,3 +109,75 @@
   opacity: 1;
   color: #0a0909;
 }
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #a92c3b;
+  padding: 10px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+}
+.close-btn {
+  display: none;
+}
+
+/* Mobile sidebar default hidden */
+@media(max-width: 768px){
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    transition: 0.3s ease-in-out;
+    z-index: 998;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar.open .close-btn {
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-size: 1.6rem;
+    color: #a92c3b;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  /* Hamburger should hide when sidebar is open */
+  .sidebar.open ~ .hamburger {
+    display: none;
+  }
+
+  .close-btn {
+    display: block;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.close-btn {
+  display: none;
+}

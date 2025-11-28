@@ -6,7 +6,7 @@ import {CircleLoader} from 'react-spinners'
 const API_URL = import.meta.env.VITE_API_URL;
 
 function ChatWindow() {
-  const {prompt, setPrompt, reply, setReply, currThreadId, prevChat, setPrevChat, setNewChat} = useContext(MyContext);
+  const {prompt, setPrompt, reply, setReply, currThreadId, prevChat, setPrevChat, setNewChat, sidebarOpen} = useContext(MyContext);
   const [loading, setLoading] = useState(false);
 
   const getReply = async ()=>{
@@ -47,7 +47,8 @@ function ChatWindow() {
 }, [reply]);
 
   return (
-    <div className="chat-window">
+    <div className={`chat-window ${sidebarOpen ? "shift" : ""}`}>
+
       <div className="nav-bar">
         <span>
           ShariqGPT <i className="fa-solid fa-angle-down"></i>

@@ -41,10 +41,36 @@
   border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* .user-div p{
-    color: #a92c3b;
-}
+/* ---------- MOBILE RESPONSIVE SPACING ---------- */
+@media (max-width: 768px) {
 
-.gpt-div p , li, h1{
-    color: #ba5d51;
-} */
+  .chats {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.2rem; /* equal spacing on all sides */
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  #new-chat {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .user-div,
+  .gpt-div {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  .gpt-div pre,
+  .gpt-div code,
+  .hljs {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+  }
+}

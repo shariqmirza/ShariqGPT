@@ -13,6 +13,8 @@ function App() {
   const [newChat, setNewChat] = useState(true)
   const [prevChat, setPrevChat] = useState([])
   const [allThreads, setAllThreads] = useState([])
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
 
   const providerValues = {
     prompt, setPrompt,
@@ -21,6 +23,7 @@ function App() {
     newChat, setNewChat,
     prevChat, setPrevChat,
     allThreads, setAllThreads,
+    sidebarOpen, setSidebarOpen
   }
   return (
     <div className='main'>
